@@ -6,7 +6,18 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
-     base: '/online-HTML-viewer/',
+    base: process.env.GITHUB_ACTIONS === 'true' ? '/online-HTML-viewer/' : '/',
+    optimizeDeps: {
+      include: [
+        '@codemirror/state',
+        '@codemirror/view',
+        '@codemirror/language',
+        '@codemirror/commands',
+        '@codemirror/lang-html',
+        '@lezer/highlight',
+        'lucide-react',
+      ],
+    },
     plugins: [
       react(),
       tailwindcss(),
