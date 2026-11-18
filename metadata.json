@@ -1,0 +1,6 @@
+{
+  "name": "HTML Online Viewer",
+  "description": "A clean, distraction-free online HTML editor and live webpage previewer.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
